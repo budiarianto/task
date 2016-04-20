@@ -1,0 +1,49 @@
+<template name="memberList">
+	<h1>MEMBER LIST</h1>
+	<a href="/addMember" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> ADD</a><br>
+	<div class="table-responsive">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<td>No.</td>
+					<td>Nama Lenkap</td>
+					<td>Nama Panggilan</td>
+					<td>Tempat Lahir</td>
+					<td>Tgl. Lahir</td>
+					<td>Alamat</td>
+					<td>No. HP</td>
+					<td>No. Tlp</td>
+					<td>Email</td>
+					<td>Agama</td>
+					<td>Status</td>
+					<td>Jabatan</td>
+					<td>Perusahaan</td>
+					<td>Alamat Perusahaan</td>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each Members}}
+					{{> Member}}
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+</template>
+<template name="Member">
+	<tr>
+		<td>No.</td>
+		<td><a href="/detailMember/{{_id}}">{{nameMember}}</a></td>
+		<td>{{nickMember}}</td>
+		<td>{{tempatLahirMember}}</td>
+		<td>{{tglLahirMember}}</td>
+		<td>{{addressMember}}</td>
+		<td>{{hpMember}}</td>
+		<td>{{tlpMember}}</td>
+		<td>{{emailMember}}</td>
+		<td>{{agamaMember}}</td>
+		<td>{{statusMember}}</td>
+		<td>{{jabatanMember}}</td>
+		<td>{{companyMember}}</td>
+		<td>{{addrsCompanyMember}}</td>
+	</tr>
+</template>

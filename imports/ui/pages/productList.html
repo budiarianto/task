@@ -1,0 +1,45 @@
+<template name="productList">
+<div class="container-fluid">
+	<h1>PRODUCT LIST</h1>
+	<a class="btn btn-primary" href="/addProduct">Tambah</a>
+	<div class="table-responsive">
+		<table class="table table-striped table-hover">
+			<thead>
+				<tr>
+					<td>NO.</td>
+					<td>NAMA</td>
+					<td>BRAND</td>
+					<td>HARGA</td>
+					<td>DIMENSI</td>
+					<td>DIMENSI(+ KEMASAN)</td>
+					<td>BERAT</td>
+					<td>WARNA</td>
+					<td>BAHAN</td>
+					<td>NEGARA PEMBUAT</td>
+					<td>KETERANGAN</td>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each Products}}
+		        	{{> Product}}
+		      	{{/each}}
+			</tbody>
+		</table>
+	</div>
+</div>	
+</template>
+<template name="Product">
+	<tr>
+		<td></td>
+		<td><a href="/detailProduct/{{_id}}" title="Click">{{nameProduct}}</a></td>
+		<td>BRAND</td>
+		<td>{{hargaProduct}}</td>
+		<td>{{dimensiProduct}}</td>
+		<td>DIMENSI(+ KEMASAN)</td>
+		<td>{{beratProduct}}</td>
+		<td>{{warnaProduct}}</td>
+		<td>BAHAN</td>
+		<td>NEGARA PEMBUAT</td>
+		<td>{{keteranganProduct}}</td>
+	</tr>
+</template>

@@ -1,0 +1,43 @@
+<template name="bisnisList">
+	<div class="container-fluid">
+		<h1 class="sub-haeder">BISNIS LIST</h1>
+		<a href="/addBisnis" class="btn btn-primary" title="Add Your Business">ADD BISNIS</a>
+		<a href="/addSubBisnis" class="btn btn-primary" title="Add Branch Company">ADD SUB-BISNIS</a>
+		<div class="table-responsive">
+        	<table class="table table-striped">
+				<thead>
+				<tr>
+					<td>No.</td>
+					<td>Nama Bisnis</td>
+					<td>Brand</td>
+					<td>Alamat</td>
+					<td>No. Tlp</td>
+					<td>No. Fax</td>
+					<td>Web</td>
+					<td>Webmail</td>
+					<td>Group</td>
+					<td>Jenis Bisnis</td>
+				</tr>	
+				</thead>
+				<tbody>		
+			      	{{#each Bizs}}
+	        			{{> biz}}
+	      			{{/each}}
+	    		</tbody>
+			</table>
+		</div>	
+	</div>
+</template>
+<template name="biz">
+				<tr>
+					<td></td>
+					<td><a href="/detailBisnis/{{_id}}">{{nameBiz}}</a></td>
+					<td>{{brandBiz}}</td>
+					<td>{{addressBiz}}</td>
+					<td>{{tlpBiz}}</td>
+					<td>{{faxBiz}}</td>
+					<td>{{webBiz}}</td>
+					<td>{{webmailBiz}}</td>
+				</tr>
+	
+</template>

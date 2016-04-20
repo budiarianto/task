@@ -1,0 +1,41 @@
+<template name="addTask">
+<div class="container-fluid">
+<h3 class="sub-header">ADD TASK</h3>
+	<form class="new-task form-horizontal">
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Nama Tugas</label>
+			<input name="nameTask" class="" required onfocus="true">
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Nama Instansi</label>
+			<input name="agencyTask" class="" required>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Tgl Mulai</label>
+			<input type="date" name="startTask" class="" required>
+		</div>
+		<div class="form-group">	
+			<label class="col-sm-2 control-label">Tgl. Akhir</label>
+			<input type="date" name="endTask" class="" required>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Status</label>
+			<input name="statusTask" class="" required>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Prioritas</label>
+			<input name="priorityTask" class="" required>
+		</div>	
+		<div class="form-group">
+			<label class="col-sm-2 control-label">PIC</label>
+			<input name="picTask" class="" required>
+		</div>	
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Keterangan</label>
+			<input name="addInfoTask" class="" required>
+		</div>
+		<input type="submit" class="btn btn-success" value="SUBMIT"> <a href="/taskList" class="btn btn-default">BACK</a>
+	</form>
+</div>	
+</template>
+

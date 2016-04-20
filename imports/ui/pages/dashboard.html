@@ -1,0 +1,50 @@
+<Template name="dashboard">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            
+          </ul>
+          <ul class="nav nav-sidebar">
+            
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+          <h1 class="page-header">Dashboard</h1>
+            
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="img/tasks.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Task</h4>
+              <a href="/dashboard/taskList"><span class="text-muted">Task</span></a>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="img/business.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Bisnis</h4>
+              <a href="/dashboard/bisnisList"><span class="text-muted">Bisnis</span></a>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="img/products.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Products</h4>
+              <a href="/dashboard/ProductList"><span class="text-muted">Products</span></a>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="img/transaction.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Transaction</h4>
+              <a href="/dashboard/transaksiList"><span class="text-muted">Transaction</span></a>
+            </div>
+          </div> 
+          {{> taskList}}
+          
+        </div>    
+      </div>
+    </div>
+
+</Template>

@@ -1,0 +1,31 @@
+<template name="subcribeList">
+<h1>SUBCRIBE LIST</h1>
+	<a href="/addSubcribe" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> ADD</a><br>
+   	<div class="table-responsive">
+        <table class="table table-striped">
+        	<thead>
+				<tr>
+					<td>No.</td>
+					<td>Id Member</td>
+					<td>Nama Member</td>
+					<td>Product</td>
+					<td>Keterangan</td>
+				</tr>
+			</thead>
+		    <tbody>
+	      {{#each Subcribes}}
+	        {{> Subcribe}}
+	      {{/each}}
+	    	</tbody>
+    	</table>
+    </div>
+</template>
+<template name="Subcribe">
+	<tr>
+		<td>No.</td>
+		<td>Nama Product</td>
+		<td>Harga</td>
+		<td>Durasi</td>
+		<td>Keterangan</td>
+	</tr>
+</template>

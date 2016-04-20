@@ -1,0 +1,60 @@
+<template name="detailBisnis">
+<div class="container-fluid">
+	<h1>DETAIL BISNIS</h1>
+	<form class="save form-horizontal" method="post">
+	{{#each Bizs}}
+	    {{> bis1}}
+	{{/each}}
+	</form>
+</div>	
+</template>
+<template name="bis1">
+	<div class="form-group">
+		<label class="col-sm-1 control-label">Nama</label>
+		<div class="col-sm-10">
+			<input nama="nameBiz" class="form-control" value="{{nameBiz}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-1 control-label">Brand</label>
+		<div class="col-sm-10">
+			<input nama="brandBiz" class="newBrandBiz form-control" value="{{brandBiz}}">
+		</div>	
+	</div>
+	<div class="form-group">
+		<label class="col-sm-1 control-label">Alamat</label>
+		<div class="col-sm-10">
+		<input nama="addressBiz" class="newAddressBiz form-control" value="{{addressBiz}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-1 control-label">Tlp</label>
+		<div class="col-sm-10">
+		<input nama="tlpBiz" class="newTlpBiz form-control" value="{{tlpBiz}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-1 control-label">Fax</label>
+		<div class="col-sm-10">
+		<input nama="faxBiz" class="newFaxBiz form-control" value="{{faxBiz}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-1 control-label">Web</label>
+		<div class="col-sm-10">
+		<input nama="webBiz" class="newWebBiz form-control" value="{{webBiz}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-1 control-label">Webmail</label>
+		<div class="col-sm-10">
+		<input nama="webmailBiz" type="email" class="newWebmailBiz form-control" value="{{webmailBiz}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<input type="submit" value="SIMPAN" class="btn btn-default">
+		<a href="/bisnisList" class="btn btn-primary">CANCEL</a>
+		<a href="/bisnisList" class="delete btn btn-danger">DELETE</a>
+	</div>
+	
+</template>

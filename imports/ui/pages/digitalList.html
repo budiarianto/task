@@ -1,0 +1,29 @@
+<template name="digitalList">
+	<div class="container-fluid">
+	<h1>DIGITAL LIST</h1>
+	<a class="btn btn-primary" href="/addDigital">Tambah</a>
+	<table class="table table-responsive table-striped table-hover">
+		<thead>
+			<tr>
+				<td>Nama</td>
+				<td>Harga</td>
+				<td>Durasi</td>
+				<td>Keterangan</td>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each Digitals}}
+	        	{{> Digital}}
+	      	{{/each}}
+		</tbody>
+	</table>
+	</div>
+</template>
+<template name="Digital">
+	<tr>
+		<td><a href="/detailDigital/{{_id}}">{{nameDigital}}</a></td>
+		<td>{{priceDigital}}</td>
+		<td>{{durationDigital}}</td>
+		<td>{{additionalDigital}}</td>
+	</tr>
+</template>

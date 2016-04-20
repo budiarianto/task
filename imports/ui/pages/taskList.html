@@ -1,0 +1,41 @@
+<template name="taskList">
+<div class="container-fluid">
+      <h2 class="sub-header">TASK LIST</h2>
+   	<a href="/addTask" class="btn btn-primary">ADD TASK</a><br>
+   	<div class="table-responsive">
+        <table class="table table-striped">
+        	<thead>
+				<tr>
+					<td>No.</td>
+					<td>Nama Tugas</td>
+					<td>Nama Instansi</td>
+					<td>Tgl Mulai</td>
+					<td>Tgl Akhir</td>
+					<td>Status</td>
+					<td>Prioritas</td>
+					<td>PIC</td>
+					<td>Keterangan</td>
+				</tr>
+			</thead>
+		    <tbody>
+	      {{#each tasks}}
+	        {{> task}}
+	      {{/each}}
+	    	</tbody>
+    	</table>
+    </div>	
+</div>    
+</template>
+<template name="task">
+	<tr>
+		<td></td>
+		<td><a href="/detailTask/{{_id}}">{{nameTask}}</a></td>
+		<td>{{agencyTask}}</td>
+  		<td>{{startTask}}</td>
+  		<td>{{endTask}}</td>
+  		<td>{{statusTask}}</td>
+  		<td>{{priorityTask}}</td>
+  		<td>{{picTask}}</td>
+  		<td>{{addInfoTask}}</td>
+  	</tr>
+</template>

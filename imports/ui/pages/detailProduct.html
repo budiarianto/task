@@ -1,0 +1,22 @@
+<template name="detailProduct">
+<div class="container-fluid">
+	<h1>DETAIL PRODUCT</h1>
+	<form>
+	{{#each Products}}
+		{{> productCont}}
+	{{/each}}
+	</form>
+</div>
+</template>
+<template name="productCont">
+	<label>Nama</label><input name="nameProduct" value="{{nameProduct}}">
+	<label>Harga</label><input name="hargaProduct" value="{{hargaProduct}}">
+	<label>Dimensi</label><input name="beratProduct" value="{{beratProduct}}">
+	<label>Warna</label><input name="warnaProduct" value="{{warnaProduct}}">
+	<label>Keterangan</label><input name="keteranganProduct" value="{{keteranganProduct}}">
+	<div class="form-group">
+		<input type="submit" value="SIMPAN" class="btn btn-default">
+		<a href="/productList" class="btn btn-primary">CANCEL</a>
+		<a href="" class="delete btn btn-danger">DELETE</a>
+	</div>
+</template>

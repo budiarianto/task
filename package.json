@@ -1,0 +1,11 @@
+{
+  "name": "task",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "meteor-node-stubs": "~0.2.0"
+  }
+}
