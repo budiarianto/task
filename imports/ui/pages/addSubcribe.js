@@ -12,6 +12,7 @@ Template.addSubcribe.events({
 
 	//=== get value
 	const target = event.target;
+	//const 
 	},
 });
 

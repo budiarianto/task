@@ -6,7 +6,8 @@
 			<thead>
 				<tr>
 					<td>No.</td>
-					<td>Nama Lenkap</td>
+					<td>Member Id</td>
+					<td>Nama Lengkap</td>
 					<td>Nama Panggilan</td>
 					<td>Tempat Lahir</td>
 					<td>Tgl. Lahir</td>
@@ -32,7 +33,8 @@
 <template name="Member">
 	<tr>
 		<td>No.</td>
-		<td><a href="/detailMember/{{_id}}">{{nameMember}}</a></td>
+		<td><a href="/detailMember/{{_id}}">{{noIdMember}}</a></td>
+		<td>{{nameMember}}</td>
 		<td>{{nickMember}}</td>
 		<td>{{tempatLahirMember}}</td>
 		<td>{{tglLahirMember}}</td>

@@ -1,3 +1,106 @@
 <template name="detailMember">
-	<h1>DETAIL MEMBER</h1>
+	{{#each Members}}
+	<h3 class=page-header>{{nameMember}}</h3>
+	
+	<form class="update-member form-horizontal container-fluid" method="post">
+	<div class="form-group">
+	<label>DATA PRIBADI</label>
+	</div>
+	<div class="form-group">
+	<label class="col-sm-2 control-label">Member ID</label>
+		<div class="col-sm-10">
+			<input class="form-control" required="" value="{{noIdMember}}">
+		</div>
+	</div>
+	<div class="form-group">
+	<label class="col-sm-2 control-label">Nama Lengkap</label>
+		<div class="col-sm-10">
+			<input id="newNameMember" class="form-control" required="" value="{{nameMember}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Nama Panggilan</label>
+		<div class="col-sm-10">
+			<input id="newNickMember" class="form-control" required="" value="{{nickMember}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Tempat Lahir</label>
+		<div class="col-sm-10">
+			<input id="NewTLahirMember" class="form-control" required="" value="{{tempatLahirMember}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Tgl Lahir</label>
+		<div class="col-sm-10">
+			<input id="newTglLahirMember" class="form-control" required="" value="{{tglLahirMember}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Alamat</label>
+		<div class="col-sm-10">
+			<input id="newAddressMember" class="form-control" required="" value="{{addressMember}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">No HP</label>
+		<div class="col-sm-10">
+			<input id="NewHpMember" class="form-control" required="" value="{{hpMember}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">No Tlp</label>
+		<div class="col-sm-10">
+			<input id="newTlpMember" class="form-control" required="" value="{{tlpMember}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Email</label>
+		<div class="col-sm-10">
+			<input id="newEmailMember" class="form-control" required="" value="{{emailMember}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Agama</label>
+		<div class="col-sm-10">
+			<input id="newAgamaMember" class="form-control" required="" value="{{agamaMember}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Status</label>
+		<div class="col-sm-10">
+			<input id="newStatusMember" class="form-control" required="" value="{{statusMember}}">
+		</div>
+	</div>
+	<div class="form-group">
+	<label class="control-label">PEKERJAAN</label>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Jabatan</label>
+		<div class="col-sm-10">
+			<input id="newJabatanMember" class="form-control" required="" value="{{jabatanMember}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Nama Perusahaan</label>
+		<div class="col-sm-10">
+			<input id="newCompanyMember" class="form-control" required="" value="{{companyMember}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Alamat Perusahaan</label>
+		<div class="col-sm-10">
+			<input id="newAddrsCompanyMember" class="form-control" required="" value="{{addrsCompanyMember}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-10">
+			<input type="submit" value="SAVE" class="save btn btn-default">
+			<a href="/memberList" class="btn btn-primary">CANCEL</a>
+			<a class="delete btn btn-danger">DELETE</a>
+		</div>
+	</div>
+</form>	
+{{/each}}
 </template>

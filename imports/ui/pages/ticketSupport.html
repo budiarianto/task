@@ -1,0 +1,20 @@
+<template name="ticketSupport">
+	<h3 class="sub-header">TIKET SUPPORT BARU</h3>
+	<form id="new-ticket">
+		<label>Nama User</label>
+		<input id="searchMember" type="text" placeholder="Search..."><br>
+		<label>Katagori Masalah</label>
+		<select id="catagoryTicket">
+			<option value="billing">Billing</option>
+			<option value="sales">Sales</option>
+			<option value="technicalSupport">Technical Support</option>
+			<option value="copyright">Hak Cipta</option>
+			<option value="others">Lainnya</option>
+		</select><br>
+		<label>Isi Pesan</label>
+		<textarea class="form-control" rows="5" id="commentTicket"></textarea><br>
+		<label>Status Ticket</label>
+		<input id="statusTicket" value="OPEN" readonly=""><br>
+		<input  type="submit" value="SUBMIT">
+	</form>
+</template>

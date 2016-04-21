@@ -13,6 +13,7 @@ Template.addMember.events({
 
 	//======get from form
 	const target=event.target;
+	const noIdMember=target.noIdMember.value;
 	const nameMember=target.nameMember.value;
 	const nickMember=target.nickMember.value;
 	const tempatLahirMember=target.tempatLahirMember.value;
@@ -29,6 +30,7 @@ Template.addMember.events({
 
 	//====== INSERT 
 	Members.insert({
+		noIdMember,
 		nameMember,
 		nickMember,
 		tempatLahirMember,

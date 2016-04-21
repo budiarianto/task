@@ -5,3 +5,4 @@ import '../imports/api/service.js';
 import '../imports/api/digital.js';
 import '../imports/api/subcribe.js';
 import '../imports/api/members.js';
+import '../imports/api/supports.js';

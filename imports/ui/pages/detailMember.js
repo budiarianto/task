@@ -2,9 +2,73 @@ import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 
-import { Members } from '../../api/member.js';
+import { Members } from '../../api/members.js';
 
 import './detailMember.html';
+
+Template.detailMember.onCreated( function detailMemberOnCreated() {
+	this.state=new ReactiveDict();
+	Meteor.subscribe('Members');
+});
+
+Template.detailMember.helpers({
+	Members() {
+		var id = FlowRouter.getParam('_id');
+    	return Members.find({"_id" : id});
+	}
+});
+
+Template.detailMember.events({
+	'click .delete': function (confirmDelete){
+		var x = confirm ("Are you sure want to delete?");
+		if (x){
+			Meteor.call('Members.remove',this._id);
+			FlowRouter.go('/memberList')
+		}else{
+			return false;
+		}	
+	},
+
+	'click .save':function (event,template){
+		var x = confirm ("Are you sure want to update ?");
+		if(x){
+			var id = FlowRouter.getParam('_id');
+			var newNameMember = template.$('#newNameMember').val();
+			var newNickMember = template.$('#newNickMember').val();
+			var NewTLahirMember = template.$('#NewTLahirMember').val();
+			var newTglLahirMember = template.$('#newTglLahirMember').val();
+			var newAddressMember = template.$('#newAddressMember').val();
+			var NewHpMember = template.$('#NewHpMember').val();
+			var newTlpMember = template.$('#newTlpMember').val();
+			var newEmailMember = template.$('#newEmailMember').val();
+			var newAgamaMember = template.$('#newAgamaMember').val();
+			var newStatusMember = template.$('#newStatusMember').val();
+			var newJabatanMember = template.$('#newJabatanMember').val();
+			var newCompanyMember = template.$('#newCompanyMember').val();
+			var newAddrsCompanyMember = template.$('#newAddrsCompanyMember').val();
+
+			Members.update({_id:id},{$set:{
+				nameMember:newNameMember,
+				nickMember:newNickMember,
+				tempatLahirMember:NewTLahirMember,
+				tglLahirMember:newTglLahirMember,
+				addressMember:newAddressMember,
+				hpMember:NewHpMember,
+				tlpMember:newTlpMember,
+				emailMember:newEmailMember,
+				agamaMember:newAgamaMember,
+				statusMember:newStatusMember,
+				jabatanMember:newJabatanMember,
+				companyMember:newCompanyMember,
+				addrsCompanyMember:newAddrsCompanyMember,
+			}});
+
+		}else{
+			return false;
+		}
+	}
+
+});
 
 
 /*
