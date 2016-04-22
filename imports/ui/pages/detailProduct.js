@@ -29,37 +29,3 @@ Template.detailProduct.events({
   		}
 	},
 });
-/*
-import { Meteor } from 'meteor/meteor';
-import { Template } from 'meteor/templating';
-import { ReactiveDict } from 'meteor/reactive-dict';
-
-import { Bizs } from '../../api/bizs.js';
-
-import './detailBisnis.html';
-
-Template.detailBisnis.onCreated( function detailBisnisOnCreated() {
-	this.state=new ReactiveDict();
-	Meteor.subscribe('Bizs');
-});
-
-Template.detailBisnis.helpers({
-	 Bizs() {
-	 	var active = FlowRouter.getParam('_id');
-    	return Bizs.find({"_id" : active});
-    	//console.log(active);
-   },
-});
-
-Template.detailBisnis.events({
-	'click .delete': function(confirmDel){
-		var x = confirm("Are you sure you want to delete?");
-  		if (x){
-      		Meteor.call('Bizs.remove',this._id);
-			FlowRouter.go('/bisnisList');
-  		}else{
-    		return false;
-  		}
-	},
-});
-*/

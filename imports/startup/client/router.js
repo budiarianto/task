@@ -48,6 +48,9 @@ import'../../ui/pages/notFound.html';
 //===== CC
 import'../../ui/pages/dashCC.js';
 import'../../ui/pages/ticketSupport.js';
+import'../../ui/pages/ticketSupportList.js';
+import'../../ui/pages/detailTicket.js';
+
 
 FlowRouter.route('/', {
   name: 'dashboard',
@@ -223,9 +226,17 @@ FlowRouter.route('/ticketSupport',{
   },
 });
 
-FlowRouter.route('/overView',{
-  name: 'overView',
+FlowRouter.route('/detailTicket/:_id',{
+  name: 'detailTicket',
   action() {
-    BlazeLayout.render('default', { content: 'dashCC',subContent:'' });
+    BlazeLayout.render('default', { content: 'dashCC',subContent:'detailTicket' });
+  },
+});
+
+
+FlowRouter.route('/overView',{
+  name: 'ticketSupportList',
+  action() {
+    BlazeLayout.render('default', { content: 'dashCC',subContent:'ticketSupportList' });
   },
 });

@@ -1,0 +1,28 @@
+<template name="ticketSupportList">
+	<h3 class="sub-header">TICKET SUPPORT LIST</h3>
+	<div class="table-responsive">
+	<table class="table table-striped"> 
+		<thead>
+			<tr>
+				<td>No.</td>
+				<td>Isi Pesan</td>
+				<td>Status</td>
+				<td>Katagori</td>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each Supports}}
+				{{> support}}
+			{{/each}}
+		</tbody>
+	</table>
+	</div>
+</template>
+<template name="support">
+	<tr>
+		<td></td>
+		<td><a href="/detailTicket/{{_id}}">{{commentTicket}}</a></td>
+		<td>{{statusTicket}}</td>
+		<td>{{catagoryTicket}}</td>
+	</tr>
+</template>

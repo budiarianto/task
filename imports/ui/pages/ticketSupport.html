@@ -1,8 +1,15 @@
 <template name="ticketSupport">
 	<h3 class="sub-header">TIKET SUPPORT BARU</h3>
-	<form id="new-ticket">
-		<label>Nama User</label>
-		<input id="searchMember" type="text" placeholder="Search..."><br>
+	<form method="get" action="/ticketSupport">
+		<label>Nama Member</label>
+		<input id="searchMember" name="searchMember" type="text" placeholder="Search Member..."><br>
+		<p id="demo">
+		</p>
+
+	</form>
+
+	<!-- <form id="new-ticket">
+		
 		<label>Katagori Masalah</label>
 		<select id="catagoryTicket">
 			<option value="billing">Billing</option>
@@ -12,9 +19,9 @@
 			<option value="others">Lainnya</option>
 		</select><br>
 		<label>Isi Pesan</label>
-		<textarea class="form-control" rows="5" id="commentTicket"></textarea><br>
+		<textarea class="form-control" rows="5" id="commentTicket" required=""></textarea><br>
 		<label>Status Ticket</label>
 		<input id="statusTicket" value="OPEN" readonly=""><br>
 		<input  type="submit" value="SUBMIT">
-	</form>
+	</form> -->
 </template>
