@@ -35,10 +35,11 @@ Template.ticketSupport.events({
 		//console.log('/ticketSupport/'+searchMember);
 		
 		//var member =["Saab", "Volvo", "BMW"]; 
-		//var member = Members.find({"nameMember" : /searchMember/});
+		var member = Members.find({"nameMember" : /searchMember/});
 		//console.log(member);
-		//document.getElementById("demo").innerHTML =member+"tes<br>";
-		FlowRouter.go('/ticketSupport/'+searchMember);
+
+		document.getElementById("demo").innerHTML = "{{#each member}}{{/each}}";
+		//FlowRouter.go('/ticketSupport/'+searchMember);
 
 
 	}
