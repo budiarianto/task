@@ -222,7 +222,14 @@ FlowRouter.route('/dashCC',{
 FlowRouter.route('/ticketSupport',{
   name: 'ticketSupport',
   action() {
-    BlazeLayout.render('default', { content: 'dashCC',subContent:'ticketSupport' });
+    BlazeLayout.render('default', { content: 'dashCC',subContent:'ticketSupport'});
+  },
+});
+
+FlowRouter.route('/ticketSupport?search',{
+  name: 'ticketSupport',
+  action() {
+    BlazeLayout.render('default', { content: 'dashCC',subContent:'ticketSupport'});
   },
 });
 
